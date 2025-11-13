@@ -8,7 +8,7 @@ html {
     top: 0;left: 0;
     width: 100vw;
     height: 100vh;
-    background: #F0F0EE;
+    background: #0f4d55;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -22,7 +22,7 @@ html {
 body, loader {
     width: 100%;
     scroll-behavior: auto;
-    
+    background-image: url(images/blue.jpg);
     background-position: 100%;
 }
 
@@ -96,95 +96,77 @@ body {
     transition: .5s;
     color : #FFE48F;
 }
-/*
-=====================================================
-    📱 MEDIA QUERIES FOR MOBILE RESPONSIVENESS (<= 768px)
-=====================================================
-*/
+
 @media (max-width: 768px) {
-    /* --- GENERAL LAYOUT AND PADDING --- */
+    
     .home {
-        /* Reduce side margins for more space on mobile */
         margin-left: 20px; 
         padding-top: 80px; 
     }
 
-    /* --- NAVIGATION BAR ADJUSTMENTS --- */
     .navbar {
         padding: 15px 5%;
-        width: 100%; /* Use full width */
-        flex-direction: column; /* Stack logo/title above nav links (optional) */
+        width: 100%; 
+        flex-direction: column; 
         align-items: flex-start;
     }
     
     .navbar ul {
-        /* Remove desktop margin and center the links */
         margin-right: 0;
         padding-left: 0;
         width: 100%;
-        justify-content: space-around; /* Distribute links evenly */
+        justify-content: space-around; 
     }
     
     .navbar ul li {
-        margin-left: 0; /* Remove horizontal margin */
+        margin-left: 0; 
     }
     
     .navbar ul li a {
-        font-size: 18px; /* Reduce font size */
+        font-size: 18px; 
     }
 
-    /* --- HOME / INFO SECTION (Image & Text) --- */
     .info {
-        /* Stack the image and text vertically */
         flex-direction: column;
-        align-items: center; /* Center them on the page */
+        align-items: center; 
         margin-left: 0; 
         padding-right: 0;
-        gap: 50px; /* Reduce the large gap */
+        gap: 50px; 
     }
 
-    /* --- IMAGE BOX (Portrait) --- */
     .home-img .img-box {
-        /* Make the image smaller and relative to the viewport height/width */
         width: 60vw;
         height: 60vw;
         margin-top: 40px; 
     }
 
-    /* --- INFO TEXT --- */
     .info-text h1 {
         font-size: 24px;
         text-align: center; 
         margin-top: 20px;
     }
     
-    /* Ensure the rotating text animation spans adjust */
     .info-text h1 span {
-        -webkit-text-stroke: .5px #aab195; /* Thinner stroke */
+        -webkit-text-stroke: .5px #aab195; 
     }
 
     .info p {
-        /* Allow paragraph to use full width and center text */
         max-width: 90%; 
         text-align: center; 
         font-size: 16px; 
         padding: 0 10px;
     }
     
-    /* --- SERVICES / CARDS SECTION --- */
     .cards-inner {
-        /* Force cards to stack instead of sitting side-by-side */
         flex-direction: column;
-        gap: 1.5em; /* Reduce gap between stacked cards */
+        gap: 1.5em; 
         padding: 0 20px;
     }
 
     .card {
-        /* Allow cards to take full available width */
         flex: 1 1 100%; 
     }
     
-    /* --- BUTTONS AND SOCIAL ICONS --- */
     .btn-sci {
         flex-direction: column;
         gap: 20px;
@@ -196,61 +178,54 @@ body {
 }
 
 @media (max-width: 480px) {
-    /* --- General Layout and Spacing --- */
     .home {
         margin-left: 10px;
         padding-top: 60px;
     }
 
-    /* --- Navbar Adjustments --- */
     .navbar {
         padding: 10px 3%;
     }
     
     .navbar ul {
-        /* Stack navigation items vertically for very small screens or make them scrollable */
         flex-wrap: wrap; 
         justify-content: center;
-        margin-top: 10px; /* Space between logo/name and links */
+        margin-top: 10px;
     }
 
     .navbar ul li {
-        margin: 5px 10px; /* Reduced margin for closer links */
+        margin: 5px 10px; 
     }
 
     .navbar ul li a {
-        font-size: 16px; /* Further reduce font size */
+        font-size: 16px; 
     }
 
-    /* --- Info Section (Text and Image) --- */
     .info {
-        gap: 30px; /* Reduced gap */
+        gap: 30px; 
     }
 
     .info-text h1 {
-        font-size: 20px; /* Smaller main heading */
+        font-size: 20px; 
     }
     
     .info p {
-        font-size: 14px; /* Smaller body text */
+        font-size: 14px; 
         padding: 0 5px;
     }
 
-    /* --- Image Box --- */
     .home-img .img-box {
-        width: 70vw; /* Take up more of the screen width */
+        width: 70vw; 
         height: 70vw;
         margin-top: 20px;
     }
 
-    /* --- Skills/Horizontal Wrapper Section --- */
     .horizontal-wrapper {
         margin-left: 5%;
         margin-right: 5%;
         padding: 5px;
     }
 
-    /* --- Progress/Skills Circles --- */
     .progress-container {
         width: 150px;
         height: 150px;
@@ -268,7 +243,6 @@ body {
         font-size: 10px;
     }
 
-    /* --- Cards Section --- */
     .main {
         padding: 2em 1em;
     }
@@ -282,13 +256,12 @@ body {
     }
     
     .card-heading {
-        font-size: 0.8cm; /* Smaller card heading */
+        font-size: 0.8cm; 
     }
     .project-name {
         font-size: 1.5em;
     }
 
-    /* --- Buttons and Social Icons --- */
     .btn {
         padding: 8px 20px;
         font-size: 14px;
@@ -513,12 +486,13 @@ body {
     flex-wrap: wrap;
     justify-content: center;      
     gap: 30px;
-    border: 3px solid #c2deb6;
+    border: 3px solid #e5e8e8;
     padding: 10px;
     border-radius: 10px;
-    background-color: #1a2105;
+    background-color: #0b3b45;
     margin-left: 20%;
     margin-right: 20%;
+    margin-top: 10%;
 }
 
 .progress-section {
@@ -751,13 +725,13 @@ body {
     background: #1a2105;
     border: 2px solid #d0cbbb;
     border-radius: 40px;
-    box-shadow: 0 0 15px #3c4915;
+    box-shadow: 0 0 15px #4fc4b5;
     font-size: 600;
     transition: .5s;
 }
 .btn:hover{
     background: transparent;
-    color: #B6EA1B;
+    color: #f0f6de;
     box-shadow: none;
 }
 .btn-sci .sci{
