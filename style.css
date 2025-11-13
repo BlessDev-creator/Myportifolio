@@ -8,7 +8,7 @@ html {
     top: 0;left: 0;
     width: 100vw;
     height: 100vh;
-    background: #0B272A;
+    background: #F0F0EE;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -17,12 +17,13 @@ html {
     font-weight: 900;
     overflow: hidden;
 }
-  
+
 
 body, loader {
     width: 100%;
-    background-color: #0a1611;
     scroll-behavior: auto;
+    
+    background-position: 100%;
 }
 
 image {
@@ -194,6 +195,115 @@ body {
     }
 }
 
+@media (max-width: 480px) {
+    /* --- General Layout and Spacing --- */
+    .home {
+        margin-left: 10px;
+        padding-top: 60px;
+    }
+
+    /* --- Navbar Adjustments --- */
+    .navbar {
+        padding: 10px 3%;
+    }
+    
+    .navbar ul {
+        /* Stack navigation items vertically for very small screens or make them scrollable */
+        flex-wrap: wrap; 
+        justify-content: center;
+        margin-top: 10px; /* Space between logo/name and links */
+    }
+
+    .navbar ul li {
+        margin: 5px 10px; /* Reduced margin for closer links */
+    }
+
+    .navbar ul li a {
+        font-size: 16px; /* Further reduce font size */
+    }
+
+    /* --- Info Section (Text and Image) --- */
+    .info {
+        gap: 30px; /* Reduced gap */
+    }
+
+    .info-text h1 {
+        font-size: 20px; /* Smaller main heading */
+    }
+    
+    .info p {
+        font-size: 14px; /* Smaller body text */
+        padding: 0 5px;
+    }
+
+    /* --- Image Box --- */
+    .home-img .img-box {
+        width: 70vw; /* Take up more of the screen width */
+        height: 70vw;
+        margin-top: 20px;
+    }
+
+    /* --- Skills/Horizontal Wrapper Section --- */
+    .horizontal-wrapper {
+        margin-left: 5%;
+        margin-right: 5%;
+        padding: 5px;
+    }
+
+    /* --- Progress/Skills Circles --- */
+    .progress-container {
+        width: 150px;
+        height: 150px;
+    }
+    .project-count {
+        font-size: 30px;
+    }
+    .project-label {
+        font-size: 14px;
+    }
+    .activity-stat .stat-value {
+        font-size: 16px;
+    }
+    .activity-stat .stat-label {
+        font-size: 10px;
+    }
+
+    /* --- Cards Section --- */
+    .main {
+        padding: 2em 1em;
+    }
+    .heading {
+        font-size: 24px;
+    }
+
+    .cards-inner {
+        gap: 1em;
+        padding: 0 10px;
+    }
+    
+    .card-heading {
+        font-size: 0.8cm; /* Smaller card heading */
+    }
+    .project-name {
+        font-size: 1.5em;
+    }
+
+    /* --- Buttons and Social Icons --- */
+    .btn {
+        padding: 8px 20px;
+        font-size: 14px;
+        margin-top: 20px;
+    }
+    .btn-sci .sci {
+        margin-top: 20px;
+    }
+    .btn-sci .sci a {
+        padding: 6px;
+        font-size: 18px;
+        margin: 0 5px;
+    }
+}
+
 .navbar ul {
     display: flex;
     margin-right: 70px;
@@ -227,7 +337,7 @@ body {
 .names {
     display: block;
     height: 100%;
-    color: #FFECAB;
+    color: #FFE48F;
     animation: role-change 15s infinite;
 }
 
@@ -401,12 +511,14 @@ body {
 
 .horizontal-wrapper {
     flex-wrap: wrap;
-    justify-content: space-evenly;
-    gap: 60px;
+    justify-content: center;      
+    gap: 30px;
     border: 3px solid #c2deb6;
-    padding: 20px;
+    padding: 10px;
     border-radius: 10px;
     background-color: #1a2105;
+    margin-left: 20%;
+    margin-right: 20%;
 }
 
 .progress-section {
@@ -418,6 +530,7 @@ body {
     font-family: 'montserrat','Aboreto';
 }
 .progress-container {
+    margin-top: 5%;
     position: relative;
     width: 200px;
     height: 200px;
@@ -454,37 +567,38 @@ body {
     color: #c2deb6;
 }
 .project-label {
-  font-size: 16px;
-  opacity: 0.8;
-  color: #FFE48F;
+    font-size: 16px;
+    opacity: 0.8;
+    color: #FFE48F;
 }
 
 .project-goal {
-  margin-top: 5px;
-  font-size: 14px;
-  opacity: 0.6;
-  color: #FFE48F;
+    margin-top: 5px;
+    font-size: 14px;
+    opacity: 0.6;
+    color: #FFE48F;
 }
 
 .activity-stats {
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-  margin-top: 15px;
-  padding: 0 10px;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 15px;
+    padding: 0 10px;
 }
 
 .activity-stat {
-  text-align: center;
+    justify-content: space-evenly;
+    color: #fff;
 }
 
 .activity-stat .stat-value {
-  font-size: 20px;
-  font-weight: 600;
+    font-size: 20px;
+    font-weight: 600;
 }
 .activity-stat .stat-label {
-  font-size: 12px;
-  opacity: 0.7;
+    font-size: 12px;
+    opacity: 0.7;
 }
 
 .cards-card ul {
@@ -535,15 +649,15 @@ body {
     --lightness: 51.37%;
 }
 .card:nth-child(2) {
-  --hue: 291.34;
-  --saturation: 95.9%;
-  --lightness: 61.76%;
+    --hue: 291.34;
+    --saturation: 95.9%;
+    --lightness: 61.76%;
 }
 
 .card:nth-child(3) {
-  --hue: 338.69;
-  --saturation: 100%;
-  --lightness: 48.04%;
+    --hue: 338.69;
+    --saturation: 100%;
+    --lightness: 48.04%;
 }
 .card-bullets {
     line-height: 1.4;
@@ -568,64 +682,64 @@ body {
 }
 
 .cta {
-  display: block;
-  align-self: end;
-  margin: 1em 0 0.5em 0;
-  text-align: center;
-  text-decoration: none;
-  color: #d0cbbb;
-  background-color: #0d0d0d;
-  padding: 0.7em;
-  border-radius: 10px;
-  font-size: 1rem;
-  font-weight: 600;
+    display: block;
+    align-self: end;
+    margin: 1em 0 0.5em 0;
+    text-align: center;
+    text-decoration: none;
+    color: #d0cbbb;
+    background-color: #0d0d0d;
+    padding: 0.7em;
+    border-radius: 10px;
+    font-size: 1rem;
+    font-weight: 600;
 }
 
 .overlay {
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
-  user-select: none;
-  opacity: var(--opacity, 0);
-  -webkit-mask: radial-gradient(
-    25rem 25rem at var(--x) var(--y),
-    #000 1%,
-    transparent 50%
-  );
-  mask: radial-gradient(
-    25rem 25rem at var(--x) var(--y),
-    #000 1%,
-    transparent 50%
-  );
-  transition: 400ms mask ease;
-  will-change: mask;
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    user-select: none;
+    opacity: var(--opacity, 0);
+    -webkit-mask: radial-gradient(
+        25rem 25rem at var(--x) var(--y),
+        #000 1%,
+        transparent 50%
+    );
+    mask: radial-gradient(
+        25rem 25rem at var(--x) var(--y),
+        #000 1%,
+        transparent 50%
+    );
+    transition: 400ms mask ease;
+    will-change: mask;
 }
 
 .overlay .card {
-  background-color: hsla(var(--hsl), 0.15);
-  border-color: hsla(var(--hsl), 1);
-  box-shadow: 0 0 0 1px inset hsl(var(--hsl));
+    background-color: hsla(var(--hsl), 0.15);
+    border-color: hsla(var(--hsl), 1);
+    box-shadow: 0 0 0 1px inset hsl(var(--hsl));
 }
 
 .overlay .cta {
-  display: block;
-  grid-row: -1;
-  width: 100%;
-  background-color: hsl(var(--hsl));
-  box-shadow: 0 0 0 1px hsl(var(--hsl));
+    display: block;
+    grid-row: -1;
+    width: 100%;
+    background-color: hsl(var(--hsl));
+    box-shadow: 0 0 0 1px hsl(var(--hsl));
 }
 
 :not(.overlay) > .card {
-  transition: 400ms background ease;
-  will-change: background;
+    transition: 400ms background ease;
+    will-change: background;
 }
 
 :not(.overlay) > .card:hover {
-  --lightness: 95%;
-  background: hsla(var(--hsl), 0.1);
+    --lightness: 95%;
+    background: hsla(var(--hsl), 0.1);
 }
 
- .btn-sci {
+.btn-sci {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -653,16 +767,16 @@ body {
 .btn-sci .sci a{
     display: inline-flex;
     padding: 8px;
-    border: 2px solid #B6EA1B;
+    border: 2px solid #d0cbbb;
     border-radius: 50%;
     font-size: 20px;
-    color: #B6EA1B;
+    color: #d0cbbb;
     margin: 0 8px;
     transition: .5s;
 }
 .btn-sci .sci a:hover{
-    background: #B6EA1B;
-    color: #B6EA1B;
-    box-shadow: 0 0 10px #B6EA1B;
+    background: #d0cbbb;
+    color: #d0cbbb;
+    box-shadow: 0 0 10px #d0cbbb;
     
 }
