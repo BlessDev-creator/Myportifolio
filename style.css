@@ -297,10 +297,10 @@ body {
     height: 40px;
     border-radius: 8px;
     display: flex;
-    color: #FFE48F;
+    color: #f2f0ec;
     font-family: 'Stack sans Notch','sans-serif';
     font-weight: 500;
-    font-size: 35px;
+    font-size: 30px;
     box-sizing: content-box;
 }
 .names-container {
@@ -310,7 +310,7 @@ body {
 .names {
     display: block;
     height: 100%;
-    color: #FFE48F;
+    color: #f2f0ec;
     animation: role-change 15s infinite;
 }
 
@@ -410,12 +410,25 @@ body {
 
 .info p{
     margin-top: 0;
-    text-align: center;
+    text-align: right;
     flex-grow: 1;
     max-width: 600px;
     font-size: 20px;
     font-family: 'montserrat', 'cursive';
     color: #d0cbbb;
+    animation-delay: 1.5s;
+}
+
+.info p{
+    opacity: 0;
+    transform: translateY(30px);
+    animation: moveup 0.5s linear forwards;
+}
+@keyframes moveup{
+    to{
+        opacity: 1;
+        transform: translateY(0px);
+    }
 }
 .info .home-image {
     float: right;
@@ -425,8 +438,8 @@ body {
 .home-img .img-box {
     margin-top: 80px;
     position: relative;
-    width: 32vw;
-    height: 32vw;
+    width: 23vw;
+    height: 23vw;
     border-radius: 50%;
     padding: 5px;
     display: flex;
@@ -434,6 +447,7 @@ body {
     align-items: center;
     overflow: hidden;
     margin-left: 0;
+    animation: moveup 0.5s linear forwards;
 }
 
 
@@ -486,10 +500,10 @@ body {
     flex-wrap: wrap;
     justify-content: center;      
     gap: 30px;
-    border: 3px solid #e5e8e8;
+    border: 3px solid #d0cbbb;
     padding: 10px;
-    border-radius: 10px;
-    background-color: #0b3b45;
+    border-radius: 25px;
+    background-color: #011413;
     margin-left: 20%;
     margin-right: 20%;
     margin-top: 10%;
@@ -612,9 +626,9 @@ body {
     align-items: start;
     gap: 1.25em;
     color: #d0cbbb;
-    background-color: #0a1611;
+    background-color: #011413;
     border: 1px solid #c2deb6;
-    border-radius: 8px;
+    border-radius: 25px;
 }
 
 .card:nth-child(1) {
@@ -744,13 +758,23 @@ body {
     border: 2px solid #d0cbbb;
     border-radius: 50%;
     font-size: 20px;
-    color: #d0cbbb;
+    color: #18807f;
     margin: 0 8px;
     transition: .5s;
 }
 .btn-sci .sci a:hover{
-    background: #d0cbbb;
+    background: #238285;
     color: #d0cbbb;
     box-shadow: 0 0 10px #d0cbbb;
     
+}
+.btn-sci .contactinfo {
+    margin-left: 20px;
+    margin-top: 30px;
+    color: #fff;
+    align-items: center;
+    font-size: 16px;
+    font-family: 'montserrat', 'aboreto';
+    color: #a0a072;
+    margin-left: 50%;
 }
